@@ -5,8 +5,9 @@ public class Kaffeautomat {
 	String kaffeesorte;
 	Integer fuellstand;
 
-	void getBeschreibung() {
-		System.out.println("Kaffeautomat " + bezeichnung + " für " + kaffeesorte
-				+ " mit Füllstand " + fuellstand + "%");
+	String getBeschreibung() {
+		return "Kaffeeautomat " + bezeichnung + " für " + kaffeesorte
+				+ " mit Füllstand " + fuellstand + "%";
 	}
 }
+

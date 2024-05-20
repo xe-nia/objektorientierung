@@ -7,17 +7,17 @@ public class Kantine {
 		kaffeeautomat.kaffeesorte = "Kaffee";
 		kaffeeautomat.fuellstand = 100;
 
-		kaffeeautomat.getBeschreibung();
+		System.out.println(kaffeeautomat.getBeschreibung());
 
 		Kaffeautomat andererAutomat = new Kaffeautomat();
 		andererAutomat.bezeichnung = "KVA-007";
 		andererAutomat.kaffeesorte = "Cappuccino";
 		andererAutomat.fuellstand = 40;
 
-		andererAutomat.getBeschreibung();
+		System.out.println(andererAutomat.getBeschreibung());
 
 		andererAutomat.kaffeesorte = "Espresso";
-		andererAutomat.getBeschreibung();
+		System.out.println(andererAutomat.getBeschreibung());
 
 	}
 }
