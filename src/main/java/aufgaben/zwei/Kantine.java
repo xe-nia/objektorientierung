@@ -1,7 +1,7 @@
 package main.java.aufgaben.zwei;
 
 public class Kantine {
-	public static void main(String[] args) throws IllegalAccessException {
+	public static void main(String[] args) {
 		Kaffeeautomat kaffeeautomat = new Kaffeeautomat();
 		kaffeeautomat.setBezeichnung("KVA-0815");
 		kaffeeautomat.setKaffeesorte("Kaffee");
