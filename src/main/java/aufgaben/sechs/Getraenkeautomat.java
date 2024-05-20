@@ -1,45 +1,36 @@
-package main.java.aufgaben.fuenf;
+package main.java.aufgaben.sechs;
 
-public class Kaffeeautomat {
+public class Getraenkeautomat {
 	private String bezeichnung;
-	private Kaffeesorte kaffeesorte;
 	private Integer fuellstand;
 
-	public Kaffeeautomat(String bezeichnung)
+	public Getraenkeautomat(String bezeichnung)
 	{
-		this(bezeichnung, Kaffeesorte.KAFFEE, 0);
+		this(bezeichnung, 0);
 	}
 
-	public Kaffeeautomat(String bezeichnung, Kaffeesorte kaffeesorte, Integer fuellstand)
+	public Getraenkeautomat(String bezeichnung, Integer fuellstand)
 	{
 		setBezeichnung(bezeichnung);
-		setKaffeesorte(kaffeesorte);
 		setFuellstand(fuellstand);
 	}
 	public String getBezeichnung() {
 		return bezeichnung;
 	}
 
-	public Kaffeesorte getKaffeesorte() {
-		return kaffeesorte;
-	}
-
 	public Integer getFuellstand() {
 		return fuellstand;
 	}
 
-	private void setBezeichnung(String neueBezeichnung) {
+	public void setBezeichnung(String neueBezeichnung) {
 		if (neueBezeichnung.equals("") || neueBezeichnung == null)
 		{
 			throw new IllegalArgumentException("Bezeichnung darf nicht leer sein.");
 		}
 		bezeichnung = neueBezeichnung;
 	}
-	public void setKaffeesorte(Kaffeesorte neueKaffeesorte) {
-		kaffeesorte = neueKaffeesorte;
-	}
 
-	private void setFuellstand(Integer neuerFuellstand) {
+	public void setFuellstand(Integer neuerFuellstand) {
 		if (neuerFuellstand < 0 || neuerFuellstand > 100)
 		{
 			throw new IllegalArgumentException(neuerFuellstand + " kein gültiger Füllstand.");
@@ -47,7 +38,7 @@ public class Kaffeeautomat {
 		fuellstand = neuerFuellstand;
 	}
 
-	void fuegeBohnenEin(Integer mengeInProzent)
+	public Integer fuelleAuf(Integer mengeInProzent)
 	{
 		Integer fuellmenge = mengeInProzent;
 		if (getFuellstand() + fuellmenge > 100)
@@ -55,11 +46,12 @@ public class Kaffeeautomat {
 			fuellmenge = 100 - getFuellstand();
 		}
 		setFuellstand(getFuellstand() + fuellmenge);
-		System.out.println(getBezeichnung() + ": " + fuellmenge + "% Bohnen aufgefüllt");
+
+		return fuellmenge;
 	}
-	String getBeschreibung() {
-		return "Kaffeeautomat " + getBezeichnung() + " für " + kaffeesorte.getName()
+
+	public String getBeschreibung() {
+		return "Getränkeautomat " + getBezeichnung()
 				+ " mit Füllstand " + getFuellstand() + "%";
 	}
 }
-
