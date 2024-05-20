@@ -9,8 +9,7 @@ public class Kantine {
 		Kaffeeautomat kva007 =
 				new Kaffeeautomat("KVA-007", Kaffeesorte.CAPPUCCINO, 40);
 		System.out.println(kva007.getBeschreibung());
-		System.out.println(kva007.fuegeBohnenEin(70));
-		System.out.println(kva007.getBeschreibung());
+		kva007.fuegeBohnenEin(70);
 
 		kva007.setKaffeesorte(Kaffeesorte.ESPRESSO);
 		System.out.println(kva007.getBeschreibung());

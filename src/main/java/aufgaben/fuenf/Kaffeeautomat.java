@@ -47,15 +47,15 @@ public class Kaffeeautomat {
 		fuellstand = neuerFuellstand;
 	}
 
-	String fuegeBohnenEin(Integer mengeInProzent)
+	void fuegeBohnenEin(Integer mengeInProzent)
 	{
 		Integer fuellmenge = mengeInProzent;
-		if (this.fuellstand + fuellmenge > 100)
+		if (getFuellstand() + fuellmenge > 100)
 		{
-			fuellmenge = 100 - fuellstand;
+			fuellmenge = 100 - getFuellstand();
 		}
 		setFuellstand(fuellstand + fuellmenge);
-		return(bezeichnung + ": " + fuellmenge + "% Bohnen aufgefüllt");
+		System.out.println(bezeichnung + ": " + fuellmenge + "% Bohnen aufgefüllt");
 	}
 	String getBeschreibung() {
 		return "Kaffeeautomat " + bezeichnung + " für " + kaffeesorte.getName()
