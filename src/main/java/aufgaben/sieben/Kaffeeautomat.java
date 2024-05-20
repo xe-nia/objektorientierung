@@ -1,4 +1,4 @@
-package main.java.aufgaben.sechs;
+package main.java.aufgaben.sieben;
 
 public class Kaffeeautomat extends Getraenkeautomat {
 	private Kaffeesorte kaffeesorte;
@@ -17,7 +17,7 @@ public class Kaffeeautomat extends Getraenkeautomat {
 		return kaffeesorte;
 	}
 
-	public void setKaffeesorte(Kaffeesorte neueKaffeesorte) {
+	private void setKaffeesorte(Kaffeesorte neueKaffeesorte) {
 		kaffeesorte = neueKaffeesorte;
 	}
 

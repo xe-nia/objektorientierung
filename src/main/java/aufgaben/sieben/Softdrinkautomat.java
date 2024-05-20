@@ -1,6 +1,6 @@
-package main.java.aufgaben.sechs;
+package main.java.aufgaben.sieben;
 
-public class Softdrinkautomat extends Getraenkeautomat{
+public class Softdrinkautomat extends Getraenkeautomat {
 	Softdrinksorte softdrinksorte;
 
 	public Softdrinkautomat(String bezeichnung) {
@@ -17,11 +17,11 @@ public class Softdrinkautomat extends Getraenkeautomat{
 		return softdrinksorte;
 	}
 
-	public void setSoftdrinksorte(Softdrinksorte softdrinksorte) {
+	private void setSoftdrinksorte(Softdrinksorte softdrinksorte) {
 		this.softdrinksorte = softdrinksorte;
 	}
 
-	private void fuelleSirupEin(Integer mengeInProzent)
+	public void fuelleSirupEin(Integer mengeInProzent)
 	{
 		System.out.println(getBezeichnung() + ": " + fuelleAuf(mengeInProzent) + "% Sirup aufgefüllt");
 	}
