@@ -2,14 +2,14 @@ package main.java.aufgaben.eins;
 
 public class Kantine {
 	public static void main(String[] args) {
-		Kaffeautomat kaffeeautomat = new Kaffeautomat();
+		Kaffeeautomat kaffeeautomat = new Kaffeeautomat();
 		kaffeeautomat.bezeichnung = "KVA-0815";
 		kaffeeautomat.kaffeesorte = "Kaffee";
 		kaffeeautomat.fuellstand = 100;
 
 		System.out.println(kaffeeautomat.getBeschreibung());
 
-		Kaffeautomat andererAutomat = new Kaffeautomat();
+		Kaffeeautomat andererAutomat = new Kaffeeautomat();
 		andererAutomat.bezeichnung = "KVA-007";
 		andererAutomat.kaffeesorte = "Cappuccino";
 		andererAutomat.fuellstand = 40;

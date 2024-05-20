@@ -1,6 +1,6 @@
 package main.java.aufgaben.eins;
 
-public class Kaffeautomat {
+public class Kaffeeautomat {
 	String bezeichnung;
 	String kaffeesorte;
 	Integer fuellstand;
