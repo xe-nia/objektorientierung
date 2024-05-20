@@ -17,25 +17,27 @@ public class Kaffeeautomat {
 		return fuellstand;
 	}
 
-	public void setBezeichnung(String neueBezeichnung) throws IllegalAccessException {
-		if (neueBezeichnung == "" || neueBezeichnung == null)
+	public void setBezeichnung(String neueBezeichnung) {
+		if (neueBezeichnung.equals("") || neueBezeichnung == null)
 		{
-			throw new IllegalAccessException("Bezeichnung darf nicht leer sein.");
+			throw new IllegalArgumentException("Bezeichnung darf nicht leer sein.");
 		}
 		bezeichnung = neueBezeichnung;
 	}
-	public void setKaffeesorte(String neueKaffeesorte) throws IllegalAccessException {
-		if (!"Kaffee".equals(neueKaffeesorte) && !"Cappuccino".equals(neueKaffeesorte) && !"Espresso".equals(neueKaffeesorte))
+	public void setKaffeesorte(String neueKaffeesorte) {
+		if (!"Kaffee".equals(neueKaffeesorte)
+				&& !"Cappuccino".equals(neueKaffeesorte)
+				&& !"Espresso".equals(neueKaffeesorte))
 		{
-			throw new IllegalAccessException(neueKaffeesorte + " ist keine gültige Kaffeesorte.");
+			throw new IllegalArgumentException(neueKaffeesorte + " ist keine gültige Kaffeesorte.");
 		}
 		kaffeesorte = neueKaffeesorte;
 	}
 
-	public void setFuellstand(Integer neuerFuellstand) throws IllegalAccessException {
+	public void setFuellstand(Integer neuerFuellstand) {
 		if (neuerFuellstand < 0 || neuerFuellstand > 100)
 		{
-			throw new IllegalAccessException(neuerFuellstand + " kein gültiger Füllstand.");
+			throw new IllegalArgumentException(neuerFuellstand + " kein gültiger Füllstand.");
 		}
 		fuellstand = neuerFuellstand;
 	}
